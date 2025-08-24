@@ -83,7 +83,7 @@ const pricingTiers: PricingTier[] = [
       "Competitor analysis included"
     ],
     cta: "Get Maximum Results",
-    ctaLink: "https://buy.stripe.com/7sY14n5c91ud2lI8Zz5os00"
+    ctaLink: "https://buy.stripe.com/6oUcN5awtc8Rf8u0t35os03"
   }
 ]
 
