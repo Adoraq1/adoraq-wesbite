@@ -8,18 +8,6 @@ interface SubscribeRequest {
 
 export async function POST(request: NextRequest) {
   try {
-    // Check for required environment variables
-    const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY
-    const MAILERLITE_GROUP_ID = process.env.MAILERLITE_GROUP_ID
-    
-    if (!MAILERLITE_API_KEY || !MAILERLITE_GROUP_ID) {
-      console.error('Missing required environment variables: MAILERLITE_API_KEY or MAILERLITE_GROUP_ID')
-      return NextResponse.json(
-        { error: 'Server configuration error' },
-        { status: 500 }
-      )
-    }
-
     const body: SubscribeRequest = await request.json()
     const { email, name, whatsappUpdates = false } = body
 
@@ -37,6 +25,18 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: 'Invalid email format' },
         { status: 400 }
+      )
+    }
+
+    // Get environment variables at runtime
+    const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY
+    const MAILERLITE_GROUP_ID = process.env.MAILERLITE_GROUP_ID
+    
+    if (!MAILERLITE_API_KEY || !MAILERLITE_GROUP_ID) {
+      console.error('Missing required environment variables')
+      return NextResponse.json(
+        { error: 'Server configuration error' },
+        { status: 500 }
       )
     }
 
@@ -63,31 +63,23 @@ export async function POST(request: NextRequest) {
     const responseData = await response.json()
 
     if (response.ok) {
-      console.log('Subscriber created successfully:', responseData)
       return NextResponse.json(
         { 
           success: true, 
-          message: 'Successfully subscribed to mailing list',
-          subscriberId: responseData.data?.id
+          message: 'Successfully subscribed to mailing list'
         },
         { status: 200 }
       )
     } else {
-      console.error('MailerLite API error:', responseData)
-      
-      // Handle common MailerLite errors
-      if (response.status === 422 && responseData.message?.includes('email')) {
+      if (response.status === 422) {
         return NextResponse.json(
-          { error: 'This email is already subscribed or invalid' },
+          { error: 'This email is already subscribed' },
           { status: 422 }
         )
       }
       
       return NextResponse.json(
-        { 
-          error: 'Failed to subscribe to mailing list',
-          details: responseData.message || 'Unknown error'
-        },
+        { error: 'Failed to subscribe to mailing list' },
         { status: response.status }
       )
     }
@@ -100,8 +92,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// Handle preflight requests for CORS
-export async function OPTIONS(request: NextRequest) {
+export async function OPTIONS() {
   return new NextResponse(null, {
     status: 200,
     headers: {
