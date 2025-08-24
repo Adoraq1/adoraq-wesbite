@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   title: 'Adoraq - Instagram Ads That Actually Work for Beauty & Wellness',
   description: 'Stop wasting money on ads that don\'t work. Get custom Instagram ads designed specifically for small beauty, wellness, and fitness businesses in London.',
   keywords: 'instagram ads, beauty business marketing, wellness advertising, fitness marketing, london advertising agency',
+  icons: {
+    icon: '/logo-small.svg',
+    shortcut: '/logo-small.svg',
+    apple: '/logo-small.svg',
+  },
   authors: [{ name: 'Adoraq' }],
   openGraph: {
     title: 'Adoraq - Instagram Ads That Actually Work',
