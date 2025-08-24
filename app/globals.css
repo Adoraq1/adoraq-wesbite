@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    font-family: Inter, system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-muted-50 to-brand-50/30 min-h-screen;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand hover:bg-brand-600 text-white font-medium px-6 py-3 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-brand2 hover:bg-brand2-600 text-white font-medium px-6 py-3 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200 p-6;
+  }
+  
+  .pricing-card {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 relative border border-muted-100 hover:border-brand/20;
+    /* Remove overflow-hidden to prevent ribbon clipping */
+  }
+  
+  .pricing-card.featured {
+    @apply ring-2 ring-brand/50 shadow-2xl border-brand/20 bg-gradient-to-br from-white to-brand-50/30;
+  }
+  
+  .pricing-card:hover {
+    @apply transform -translate-y-2;
+  }
+  
+  .comparison-table {
+    @apply bg-white rounded-2xl shadow-lg overflow-hidden border border-muted-100;
+  }
+  
+  .comparison-header {
+    @apply bg-gradient-to-r from-brand to-brand2 text-white p-6;
+  }
+  
+  .comparison-row {
+    @apply border-b border-muted-100 hover:bg-muted-50 transition-colors duration-150;
+  }
+  
+  .comparison-cell {
+    @apply p-4 text-center border-r border-muted-100 last:border-r-0;
+  }
+  
+  /* Mobile optimizations for pricing */
+  @media (max-width: 768px) {
+    .pricing-card {
+      @apply p-4 mx-2 mt-6;
+    }
+    
+    .pricing-card.featured {
+      @apply scale-100 mt-8 mb-4;
+    }
+    
+    .comparison-table {
+      @apply text-sm;
+    }
+    
+    .comparison-cell {
+      @apply p-2 text-xs;
+    }
+  }
+  
+  /* Tablet optimizations */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .pricing-card {
+      @apply p-6;
+    }
+  }
+  
+  /* Ensure equal height cards */
+  .pricing-cards-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8;
+    /* Add padding to prevent ribbon clipping */
+    padding-top: 2rem;
+  }
+  
+  .pricing-cards-grid > * {
+    @apply h-full;
+  }
+  
+  /* Ensure ribbons are never clipped */
+  .pricing-card {
+    margin-top: 1rem;
+  }
+  
+  .pricing-card .absolute {
+    /* Ensure ribbons have enough space */
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Pricing animations */
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); }
+  }
+  
+  .pricing-card.featured {
+    animation: glow 3s ease-in-out infinite;
+  }
+  
+  /* Additional mobile-specific improvements */
+  @media (max-width: 640px) {
+    /* Stack pricing cards on small mobile */
+    .pricing-cards-grid {
+      @apply grid-cols-1 gap-6;
+    }
+    
+    /* Adjust banner positioning for mobile */
+    .pricing-card {
+      @apply mt-8;
+    }
+    
+    /* Smaller badges on mobile but ensure they're visible */
+    .pricing-card .absolute {
+      @apply -top-3;
+    }
+    
+    .pricing-card .absolute > div {
+      @apply px-4 py-1 text-xs;
+    }
+  }
+  
+  /* Large mobile and small tablet */
+  @media (min-width: 641px) and (max-width: 768px) {
+    .pricing-cards-grid {
+      @apply grid-cols-1 gap-6;
+    }
+  }
+  
+  /* Checklist animations */
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  /* Enhanced checklist card styles */
+  .checklist-card {
+    @apply relative;
+  }
+  
+  .checklist-item {
+    @apply transform transition-all duration-300;
+  }
+  
+  .checklist-item:hover {
+    @apply shadow-lg scale-105;
+  }
+  
+  /* Hero section responsive improvements */
+  @media (max-width: 1024px) {
+    .hero-checklist-card {
+      @apply mx-auto mt-12;
+      max-width: 600px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-checklist-card {
+      @apply mt-8 p-6;
+    }
+    
+    .checklist-item {
+      @apply p-2;
+    }
+    
+    .checklist-item h4 {
+      @apply text-xs;
+    }
+    
+    .checklist-item p {
+      @apply text-xs;
+    }
+  }
+}
