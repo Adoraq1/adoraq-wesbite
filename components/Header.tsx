@@ -40,7 +40,7 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="https://instagram.com/Adoraq"
+              href="https://instagram.com/adoraq_"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-600 hover:text-brand transition-colors duration-200"
@@ -77,7 +77,7 @@ export default function Header() {
                 </Link>
               ))}
               <Link
-                href="https://instagram.com/Adoraq"
+                href="https://instagram.com/adoraq_"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-muted-600 hover:text-brand transition-colors duration-200 py-2"

@@ -20,7 +20,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center space-x-4">
               <Link
-                href="https://instagram.com/Adoraq"
+                href="https://instagram.com/adoraq_"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-10 h-10 bg-brand text-white rounded-lg hover:bg-brand-600 transition-colors duration-200"
