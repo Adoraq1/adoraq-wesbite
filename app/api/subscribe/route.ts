@@ -1,9 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-// MailerLite API configuration
-const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY
-const MAILERLITE_GROUP_ID = process.env.MAILERLITE_GROUP_ID
-
 interface SubscribeRequest {
   email: string
   name: string
@@ -13,6 +9,9 @@ interface SubscribeRequest {
 export async function POST(request: NextRequest) {
   try {
     // Check for required environment variables
+    const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY
+    const MAILERLITE_GROUP_ID = process.env.MAILERLITE_GROUP_ID
+    
     if (!MAILERLITE_API_KEY || !MAILERLITE_GROUP_ID) {
       console.error('Missing required environment variables: MAILERLITE_API_KEY or MAILERLITE_GROUP_ID')
       return NextResponse.json(
