@@ -19,9 +19,10 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <img src="/logo-small.svg" alt="Adoraq Logo" className="w-8 h-8" />
-            <span className="text-xl font-bold text-muted-900">Adoraq</span>
+          <Link href="/" className="flex items-center">
+            <span className="text-2xl font-bold bg-gradient-to-r from-brand to-brand2 bg-clip-text text-transparent">
+              Adoraq
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
