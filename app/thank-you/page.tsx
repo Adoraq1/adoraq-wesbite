@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { CheckCircle, Download, Clock, ArrowRight } from 'lucide-react'
-import Testimonials from '@/components/Testimonials'
+import Testimonials from '../../components/Testimonials'
 
 export default function ThankYouPage() {
   return (
