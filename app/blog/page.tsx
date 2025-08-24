@@ -1,6 +1,6 @@
 import { TrendingUp, BookOpen, Users } from 'lucide-react'
-import BlogList from '../../components/BlogList'
-import postsData from '../../data/posts.json'
+import BlogList from '@/components/BlogList'
+import postsData from '@/data/posts.json'
 
 export default function BlogPage() {
   const featuredPosts = postsData.filter(post => post.featured)

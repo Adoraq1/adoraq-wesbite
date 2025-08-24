@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { CheckCircle, ArrowRight, Shield, TrendingUp, Users, Clock } from 'lucide-react'
-import PricingCards from '../../components/PricingCards'
-import Testimonials from '../../components/Testimonials'
-import FAQ from '../../components/FAQ'
+import PricingCards from '@/components/PricingCards'
+import Testimonials from '@/components/Testimonials'
+import FAQ from '@/components/FAQ'
 
 export default function PackagesPage() {
   return (
