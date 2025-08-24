@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
-import PostLayout from '@/components/PostLayout'
-import postsData from '@/data/posts.json'
+import PostLayout from '../../../components/PostLayout'
+import postsData from '../../../data/posts.json'
 
 interface BlogPostPageProps {
   params: {

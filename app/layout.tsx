@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import FloatingWhatsApp from '@/components/FloatingWhatsApp'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import FloatingWhatsApp from '../components/FloatingWhatsApp'
 
 export const metadata: Metadata = {
   title: 'Adoraq - Instagram Ads That Actually Work for Beauty & Wellness',

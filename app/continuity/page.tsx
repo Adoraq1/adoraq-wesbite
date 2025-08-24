@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { CheckCircle, Calendar, MessageCircle, TrendingUp, Clock, ArrowRight, Star } from 'lucide-react'
-import Testimonials from '@/components/Testimonials'
+import Testimonials from '../../components/Testimonials'
 
 export default function ContinuityPage() {
   const features = [
