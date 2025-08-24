@@ -28,7 +28,7 @@ export default function Footer() {
                 <Instagram size={20} />
               </Link>
               <Link
-                href="https://wa.me/44749052323"
+                href="https://wa.me/4407493052323"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-10 h-10 bg-brand2 text-white rounded-lg hover:bg-brand2-600 transition-colors duration-200"

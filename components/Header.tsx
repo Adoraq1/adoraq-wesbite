@@ -11,7 +11,7 @@ export default function Header() {
     { name: 'Home', href: '/' },
     { name: 'Packages', href: '/packages' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: 'https://wa.me/44749052323' },
+    { name: 'Contact', href: 'https://wa.me/4407493052323' },
   ]
 
   return (
