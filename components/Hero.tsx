@@ -10,33 +10,36 @@ export default function Hero() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-muted-900 leading-tight">
-                Stop Wasting Money on{' '}
+                Sell Out Your Events with{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-brand2">
-                  Ads That Don't Work
+                  Ready-to-Use Social Media Campaigns
                 </span>
               </h1>
               
               <p className="text-xl text-muted-600 leading-relaxed">
-                Download the 1-page checklist: <strong>The 7 Things Every Salon Must Do Before Running an Instagram Ad.</strong>
+                Custom posters, Instagram ads, and captions — all done-for-you in just days.
               </p>
             </div>
 
-            {/* Benefits */}
-            <div className="space-y-3">
-              {[
-                'Set up your profile to convert',
-                'Craft an irresistible offer',
-                'Launch with the right budget & timeline'
-              ].map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-brand2 flex-shrink-0" />
-                  <span className="text-muted-700">{benefit}</span>
-                </div>
-              ))}
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#free-guide"
+                className="btn-primary inline-flex items-center justify-center space-x-2 text-lg px-8 py-4"
+              >
+                <span>Get the Free Guide</span>
+                <Download className="w-5 h-5" />
+              </a>
+              <a
+                href="#packages"
+                className="btn-secondary inline-flex items-center justify-center space-x-2 text-lg px-8 py-4"
+              >
+                <span>View Packages</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </a>
             </div>
-
-            {/* Form */}
-            <LeadForm />
 
             {/* Trust Elements */}
             <div className="flex flex-wrap items-center gap-6 pt-4">
@@ -51,7 +54,7 @@ export default function Hero() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-muted-600">Join 500+ salon owners</span>
+                <span className="text-sm text-muted-600">Join 200+ event organizers</span>
               </div>
               <div className="flex items-center space-x-1">
                 {[1, 2, 3, 4, 5].map((star) => (
@@ -83,40 +86,32 @@ export default function Hero() {
                   <div className="w-16 h-16 bg-gradient-to-br from-brand to-brand2 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <Star className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Instagram Ad Checklist</h3>
-                  <p className="text-gray-600 text-sm">7 Essential Steps for Beauty & Wellness Businesses</p>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Event Marketing Guide</h3>
+                  <p className="text-gray-600 text-sm">5 Proven Steps to Fill More Seats with Social Media</p>
                 </div>
                 
                 {/* Enhanced Checklist Items */}
                 <div className="space-y-4 mb-8">
                   {[
                     {
-                      title: 'Profile optimization',
-                      description: 'Make sure your Instagram bio converts visitors into clients'
+                      title: 'Event positioning',
+                      description: 'Create compelling event descriptions that drive registrations'
                     },
                     {
-                      title: 'Offer positioning', 
-                      description: 'Create irresistible offers that your audience can\'t refuse'
+                      title: 'Audience targeting', 
+                      description: 'Reach the right people who actually attend events like yours'
                     },
                     {
-                      title: 'Budget planning',
-                      description: 'Set the right budget and timeline for maximum ROI'
+                      title: 'Creative strategy',
+                      description: 'Design eye-catching posters and ads that stop the scroll'
                     },
                     {
-                      title: 'Creative guidelines',
-                      description: 'Design ads that stop the scroll and drive action'
+                      title: 'Content calendar',
+                      description: 'Plan your social media posts for maximum engagement'
                     },
                     {
-                      title: 'Audience targeting',
-                      description: 'Reach the perfect customers who actually book appointments'
-                    },
-                    {
-                      title: 'Performance tracking',
-                      description: 'Monitor what works and optimize for better results'
-                    },
-                    {
-                      title: 'Scaling strategies',
-                      description: 'Double down on winning ads to grow your business'
+                      title: 'Conversion optimization',
+                      description: 'Turn interested followers into ticket buyers'
                     }
                   ].map((item, index) => (
                     <div 

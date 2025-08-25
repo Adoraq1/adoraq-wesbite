@@ -7,24 +7,24 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: "What's included in the free checklist?",
-    answer: "A comprehensive 1-page guide covering the 7 essential steps every beauty or wellness business must complete before launching Instagram ads. This includes profile optimization, offer positioning, budget planning, and more."
+    question: "What kind of events do you work with?",
+    answer: "We work with all types of events: workshops, conferences, meetups, networking events, training sessions, launches, and more. Whether you're organizing a small workshop or a large conference, we can create marketing materials that help you fill seats."
   },
   {
-    question: "Is this really free?",
-    answer: "Yes, completely free. No hidden costs, no credit card required. We're sharing this because we believe every small business deserves to succeed with their advertising."
+    question: "How fast can I get my campaign?",
+    answer: "Our Essentials Campaign is delivered in 3-4 days, Growth Campaign in 4-5 days, and for last-minute events, our Starter Kit is delivered in 48 hours. We understand event timelines are tight!"
   },
   {
-    question: "How quickly will I receive the checklist?",
-    answer: "The download link will be sent to your email immediately after you submit the form. Check your inbox (and spam folder just in case) within 2-3 minutes."
+    question: "Do you also run the ads?",
+    answer: "Currently, we focus on delivering done-for-you campaigns with all the creatives, captions, and strategy. Ad management is optional and can be discussed for larger projects or ongoing partnerships."
   },
   {
-    question: "Do you work with businesses outside of London?",
-    answer: "While we're based in London and specialize in the local market, we do work with beauty, wellness, and fitness businesses throughout the UK. Contact us to discuss your specific needs."
+    question: "What if my event is last-minute?",
+    answer: "No problem! Our Event Ad Starter Kit (£49.99) is specifically designed for last-minute events and is delivered in 48 hours. It includes 1 poster, 1 Instagram story, and captions ready to use immediately."
   },
   {
-    question: "What makes your ads different?",
-    answer: "We focus specifically on beauty, wellness, and fitness businesses. This means we understand your customers, your challenges, and what actually converts in your industry. No generic templates - just proven strategies."
+    question: "Can you help with Eventbrite/Meetup optimization?",
+    answer: "Yes! All our packages include optimized listing text for Eventbrite and Meetup platforms. We know what converts on these platforms and can help you stand out from the competition."
   }
 ]
 

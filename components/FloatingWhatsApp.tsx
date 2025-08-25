@@ -23,7 +23,7 @@ export default function FloatingWhatsApp() {
         {/* Tooltip */}
         {isHovered && (
           <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-muted-900 text-white text-sm rounded-lg whitespace-nowrap opacity-0 animate-in fade-in duration-200">
-            Chat with us on WhatsApp
+            Chat with us about your next event
             <div className="absolute top-full right-3 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-muted-900"></div>
           </div>
         )}
