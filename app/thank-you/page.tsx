@@ -31,40 +31,39 @@ export default function ThankYouPage() {
           </div>
         </div>
 
-        {/* Tripwire Offer */}
-        <div className="card max-w-2xl mx-auto mb-16 relative overflow-hidden">
+        {/* One-Time Offer */}
+        <div className="card max-w-2xl mx-auto mb-16 relative overflow-hidden bg-gradient-to-br from-purple-50 to-blue-50 border-2 border-purple-200">
           {/* Urgency Badge */}
-          <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-            Today Only
+          <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+            🎟 One-Time Offer
           </div>
           
           <div className="p-8">
             <div className="text-center mb-6">
               <h2 className="text-3xl font-bold text-muted-900 mb-4">
-                Special Offer: Get 3 Custom Instagram Ads for £27
+                Exclusive One-Time Offer: Kickstart Your Event Promotion for Just £49.99
               </h2>
               <p className="text-lg text-muted-600">
-                Since you're already here, let's get your first ads created today. 
-                Perfect for testing what works for your business.
+                Get a professional ad kit in 48h — posters, stories, and captions ready-to-use for your next event.
               </p>
             </div>
 
             <div className="space-y-4 mb-8">
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-brand2" />
-                <span className="text-muted-700">3 custom ad designs tailored to your business</span>
+                <span className="text-muted-700">1 Custom Poster/Flyer (Instagram & print ready)</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-brand2" />
-                <span className="text-muted-700">Ready-to-use copy that converts</span>
+                <span className="text-muted-700">1 Instagram Story Ad</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-brand2" />
-                <span className="text-muted-700">2-3 business day delivery</span>
+                <span className="text-muted-700">1 Caption + CTA suggestion</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Clock className="w-5 h-5 text-red-500" />
-                <span className="text-muted-700"><strong>Today only:</strong> 70% off regular price (was £90)</span>
+                <CheckCircle className="w-5 h-5 text-green-500" />
+                <span className="text-muted-700"><strong>🎁 Hidden Freebies</strong> (delivered after purchase)</span>
               </div>
             </div>
 
@@ -73,11 +72,15 @@ export default function ThankYouPage() {
                 href="https://buy.stripe.com/7sY14n5c91ud2lI8Zz5os00"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary inline-flex items-center space-x-2 text-lg px-8 py-4"
+                className="btn-primary inline-flex items-center space-x-2 text-lg px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600"
               >
-                <span>Yes, I Want the 3 Ads for £27</span>
+                <span>Claim My Starter Kit — £49.99</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
+              
+              <p className="text-sm text-red-600 font-semibold bg-red-50 px-4 py-2 rounded-lg border border-red-200">
+                ⚠️ This special one-time offer is only available now — once you leave this page, it's gone.
+              </p>
               
               <p className="text-sm text-muted-500">
                 Secure payment via Stripe • 30-day money-back guarantee
