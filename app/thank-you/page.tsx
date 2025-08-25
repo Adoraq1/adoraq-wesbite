@@ -61,10 +61,7 @@ export default function ThankYouPage() {
                 <CheckCircle className="w-5 h-5 text-brand2" />
                 <span className="text-muted-700">1 Caption + CTA suggestion</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                <span className="text-muted-700"><strong>🎁 Hidden Freebies</strong> (delivered after purchase)</span>
-              </div>
+
             </div>
 
             <div className="text-center space-y-4">
