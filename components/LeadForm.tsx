@@ -10,9 +10,7 @@ interface LeadFormProps {
 export default function LeadForm({ onSuccess }: LeadFormProps) {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
-    eventType: '',
-    eventDate: ''
+    email: ''
   })
   const [isLoading, setIsLoading] = useState(false)
   const [errors, setErrors] = useState<{[key: string]: string}>({})
@@ -49,9 +47,7 @@ export default function LeadForm({ onSuccess }: LeadFormProps) {
         },
         body: JSON.stringify({
           email: formData.email,
-          name: formData.name,
-          eventType: formData.eventType,
-          eventDate: formData.eventDate
+          name: formData.name
         })
       })
       
@@ -146,42 +142,7 @@ export default function LeadForm({ onSuccess }: LeadFormProps) {
           )}
         </div>
 
-        <div>
-          <label htmlFor="eventType" className="block text-sm font-medium text-muted-700 mb-2">
-            Event Type
-          </label>
-          <select
-            id="eventType"
-            name="eventType"
-            value={formData.eventType}
-            onChange={handleInputChange}
-            className="w-full px-4 py-3 rounded-xl border border-muted-300 focus:ring-brand focus:ring-2 focus:border-transparent transition-all duration-200"
-          >
-            <option value="">Select event type</option>
-            <option value="workshop">Workshop</option>
-            <option value="conference">Conference</option>
-            <option value="meetup">Meetup</option>
-            <option value="networking">Networking Event</option>
-            <option value="training">Training Session</option>
-            <option value="launch">Product/Service Launch</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
 
-        <div>
-          <label htmlFor="eventDate" className="block text-sm font-medium text-muted-700 mb-2">
-            Event Date
-          </label>
-          <input
-            type="date"
-            id="eventDate"
-            name="eventDate"
-            value={formData.eventDate}
-            onChange={handleInputChange}
-            className="w-full px-4 py-3 rounded-xl border border-muted-300 focus:ring-brand focus:ring-2 focus:border-transparent transition-all duration-200"
-            placeholder="When is your event?"
-          />
-        </div>
 
         <button
           type="submit"
